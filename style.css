@@ -1,32 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam');
 
-.lousa{
-    background-image: 
-		radial-gradient( circle at left 30%, 
-			rgba(34, 34, 34, 0.2), 
-			rgba(34, 34, 34, 0.2) 80px, 
-			rgba(34, 34, 34, 0.3) 100px, 
-			rgba(51, 51, 51, 0.3) 160px, 
-			rgba(51, 51, 51, 0.3)), 
-		linear-gradient( 215deg, transparent, transparent 100px, 
-			rgba(34,34,34,0.4) 260px, rgba(34,34,34,0.4) 320px, transparent), 
-		radial-gradient( circle at right, rgba(17,17,17,0.4), rgba(51, 51, 51, 0.5)),
-		linear-gradient(0deg, rgba(80,80,80,1) , rgba(80,80,80,1) 70% );
-	background-color: rgba(51, 51, 51, 1);
-    font-family: 'Kalam', cursive;
-    color: #fff;
-    border: tan solid 12px;
-	border-top: #bda27e solid 12px;
-	border-left: #b19876 solid 12px;
-	border-bottom: #c9ad86 solid 12px;
-	box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 
-		0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 
-		3px 4px 8px 5px rgba(0, 0, 0, 0.5);
-    padding: 45px;    
-    color: rgba(120,120,120,0.8);
-    text-shadow: -1px 0 0px white;
-}
-
 body{
     background: url('img/back.png');
     background-size: contain;
@@ -38,8 +11,9 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;    
-    background: #ffc50d;
-    padding-right: 100px;
+    background: #ffc50d;    
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 nav a{
@@ -51,6 +25,75 @@ nav a:hover{
     color: #000;
     font-size: 19px;
     text-decoration: none;
+}
+
+
+.navbar .nav-item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.navbar .nav-item:last-child {
+    margin-right: 55px;
+}
+  
+.dropdown-toggle::after {
+     transition: transform 0.15s linear; 
+}
+  
+.show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+}
+  
+.dropdown-menu {
+    margin-top: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: #000 !important;
+}
+
+.navbar-dark .navbar-toggler {
+    color: #000;    
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.navbar-dark .navbar-toggler-icon{
+    background-image: none;    
+    width: auto;
+    height: auto;
+    font-size: 28px;
+}
+
+.navbar-dark .navbar-toggler{
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.show > .dropdown-menu {
+    max-height: 800px;
+    visibility: visible;
+}
+    
+.dropdown-menu {
+    display: block;
+    max-height: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    top: 150%;
+    background: #ffc50d;
+}
+
+.dropdown-divider{
+    border-color: #000;
+}
+
+.dropdown-item:focus, .dropdown-item:hover, .dropdown-item:active {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #e9ecef69;
 }
 
 .banner{
@@ -109,7 +152,7 @@ h1{
 .cardapio .botao:hover{    
     padding: 9px 40px;    
     text-decoration: none;
-    
+    transition: 0.5s;
 }
 
 .cardapio:hover{
@@ -120,6 +163,34 @@ h1{
 .cardapio:hover .botao{    
     top: 60%;    
     opacity: 1;
+}
+
+
+.lousa{
+    background-image: 
+		radial-gradient( circle at left 30%, 
+			rgba(34, 34, 34, 0.2), 
+			rgba(34, 34, 34, 0.2) 80px, 
+			rgba(34, 34, 34, 0.3) 100px, 
+			rgba(51, 51, 51, 0.3) 160px, 
+			rgba(51, 51, 51, 0.3)), 
+		linear-gradient( 215deg, transparent, transparent 100px, 
+			rgba(34,34,34,0.4) 260px, rgba(34,34,34,0.4) 320px, transparent), 
+		radial-gradient( circle at right, rgba(17,17,17,0.4), rgba(51, 51, 51, 0.5)),
+		linear-gradient(0deg, rgba(80,80,80,1) , rgba(80,80,80,1) 70% );
+	background-color: rgba(51, 51, 51, 1);
+    font-family: 'Kalam', cursive;
+    color: #fff;
+    border: tan solid 12px;
+	border-top: #bda27e solid 12px;
+	border-left: #b19876 solid 12px;
+	border-bottom: #c9ad86 solid 12px;
+	box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 
+		0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 
+		3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    padding: 45px;    
+    color: rgba(120,120,120,0.8);
+    text-shadow: -1px 0 0px white;
 }
 
 form{
@@ -184,9 +255,8 @@ form button{
     nav a{
         text-align: center;
     }
-    nav{
-        padding-right: 15px;
-        padding-left: 15px;
+    .navbar-brand{
+        margin: 0;
     }        
     .icones{        
         justify-content: space-evenly;        
