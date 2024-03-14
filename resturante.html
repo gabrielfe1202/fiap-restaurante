@@ -16,30 +16,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <header>
+
+    <header>  
         <nav>
-            <a href="#"><img src="img/logo.png" style="height: 80px;" ></a>
-            <a href="#">Home</a>
+            <a href="resturante.html" class="logo"><img src="img/logo.png" style="height: 80px;" ></a>
+            <a href="resturante.html">Home</a>
             <a href="#sobre">Sobre nós</a>
             <a href="#">Cardapio</a>
-            <a href="#contato ">Contato</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
+
     <section class="banner">        
         <h1>Comidas e gargalhadas</h1>
     </section>
+  
     <section style="padding: 45px 0px;">
         <div class="container">
             <div class="row text-center">
@@ -47,40 +44,52 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="cardapio" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('img/porcoes.jpg');">                   
-                        <p class="texto">Entradas</p>
-                        <a class="botao" href="#">Cardapio</a>
+                    <div style="overflow: hidden;">
+                        <div class="cardapio" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('img/porcoes.jpg');">                   
+                            <p class="texto">Entradas</p>
+                            <a class="botao" href="#">Cardapio</a>
+                        </div>
+                    </div>
+                </div>     
+                <div class="col-md-4">
+                    <div style="overflow: hidden;">
+                        <div class="cardapio" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('img/carne.jpg');">                   
+                            <p class="texto">Pratos principais</p>
+                            <a class="botao" href="#">Cardapio</a>
+                        </div>
                     </div>
                 </div>                
                 <div class="col-md-4">
-                    <div class="cardapio" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('img/carne.jpg');">                   
-                        <p class="texto">Pratos principais</p>
-                        <a class="botao" href="#">Cardapio</a>
-                    </div>
-                </div>                
-                <div class="col-md-4">
-                    <div class="cardapio" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('img/choop.jpg');">                   
-                        <p class="texto">Bebidas</p>
-                        <a class="botao" href="#">Cardapio</a>
+                    <div style="overflow: hidden;">
+                        <div class="cardapio" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('img/choop.jpg');">                   
+                            <p class="texto">Bebidas</p>
+                            <a class="botao" href="#">Cardapio</a>
+                        </div>
                     </div>
                 </div>                
             </div>
         </div>
     </section>
+
     <section style="padding-bottom: 65px;" id="sobre">
-        <div class="container" style="display: flex;justify-content: center;">
-            <div class="col-md-8">
+        <div class="container" style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+            <div class="col-md-12">
                 <h1>Sobre nós</h1>
-                <p style="text-align: center;color: #000;font-size: 16px;">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi similique rem reiciendis veritatis sint nobis qui. In amet doloribus, minus eveniet similique maxime repudiandae nostrum quo soluta magnam fugiat sint.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi similique rem reiciendis veritatis sint nobis qui. In amet doloribus, minus eveniet similique maxime repudiandae nostrum quo soluta magnam fugiat sint.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi similique rem reiciendis veritatis sint nobis qui. In amet doloribus, minus eveniet similique maxime repudiandae nostrum quo soluta magnam fugiat sint.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi similique rem reiciendis veritatis sint nobis qui. In amet doloribus, minus eveniet similique maxime repudiandae nostrum quo soluta magnam fugiat sint.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi similique rem reiciendis veritatis sint nobis qui. In amet doloribus, minus eveniet similique maxime repudiandae nostrum quo soluta magnam fugiat sint.
+            </div>
+            <div class="col-md-8 lousa">                
+                <p style="text-align: center;color: rgba(180,180,180,0.8);font-size: 22px;">
+                    Somos mais do que apenas um restaurante - somos uma experiência única onde o humor encontra a gastronomia. Fundado por um grupo de comediantes apaixonados pela culinária, o Restaurante Cômico Risadas é o lugar onde os sabores deliciosos se misturam com piadas hilariantes.
+                    <br><br>
+                    Imagine-se entrando em um ambiente acolhedor e vibrante, onde as paredes ecoam com risos contagiantes e as mesas estão repletas de pessoas compartilhando histórias engraçadas enquanto saboreiam pratos incríveis.
+                    <br><br>
+                    No menu, você encontrará uma mistura de pratos clássicos reinventados com um toque humorístico, bem como criações originais que vão surpreender seu paladar e seu senso de humor. Desde entradas que provocam risadas até sobremesas que fazem você rir alto, cada item é cuidadosamente elaborado para garantir uma experiência gastronômica inesquecível.                    
+                    <br><br>
+                    No Restaurante Cômico Risadas, acreditamos que a vida é muito curta para não rir e comer bem. Então junte-se a nós para uma noite cheia de diversão, risadas e, é claro, comida incrível. Estamos ansiosos para fazer você sorrir, tanto com nossos pratos quanto com nossas piadas!
                 </p>
             </div>
         </div>
     </section>
+
     <section id="contato">
         <div class="container" style="display: flex;justify-content: center;">
             <div class="col-md-6">
@@ -96,17 +105,23 @@
             </div>
         </div>
     </section>
+
     <footer class="rodape">
         <div class="container">
             <div class="col-md-8">
                 <p>© Copyright 2024 Grupo 7. Todos os direitos reservados. <a href="#">Politica de privacidade</a></p>
             </div>
-            <div class="col-md-4" style="display: flex;flex-flow: wrap;flex-direction: row;justify-content: end;align-items: center;">
-                <i class="fa fa-facebook icone-rodape"></i>
-                <i class="fa fa-whatsapp icone-rodape"></i>
-                <i class="fa fa-instagram icone-rodape"></i>
+            <div class="col-md-4 icones">
+                <a href="#" target="_blank"><i class="fa fa-facebook icone-rodape"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-whatsapp icone-rodape"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-instagram icone-rodape"></i></a>
             </div>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
