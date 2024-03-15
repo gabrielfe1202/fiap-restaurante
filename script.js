@@ -66,3 +66,29 @@ $(window).on("load resize", function() {
 const searchParams = new URLSearchParams(window.location.search);
 console.log(searchParams.get('categoria')); 
 
+var requestURL = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+var request = new XMLHttpRequest();
+request.open("GET", requestURL);
+request.responseType = "json";
+request.send();
+request.onload = function () {
+  var superHeroes = request.response;
+  console.log(superHeroes)
+  var heroes = superHeroes["members"];
+
+  var container = '';
+  for (var i = 0; i < heroes.length; i++) {
+    container += '<div class="col-md-10 row prato" style="padding-top: 20px" >';
+      container += '<div class="col-md-3">';
+        container += `<img src="img/macarao.jpg" style="width: 100%"/>`          
+      container += '</div>'
+      container += '<div class="col-md-8">';  
+        container += `<p>${heroes[i].name}</p>`    
+        container += `<p>${heroes[i].secretIdentity}</p>`    
+      container += '</div>'
+    container += '</div>'
+  }
+  document.getElementById("pratos").innerHTML = container
+  //populateHeader(superHeroes);
+  //showHeroes(superHeroes);
+};
