@@ -29,13 +29,17 @@ var contact = document.querySelector('#contato');
 var aboutLink = document.querySelector('nav a[href="#sobre"]');
 var contactLink = document.querySelector('nav a[href="#contato"]');
 
-aboutLink.addEventListener('click', function() {
-    smoothScroll('#sobre', 1000);
-});
+if(aboutLink != null){
+  aboutLink.addEventListener('click', function() {
+      smoothScroll('#sobre', 1000);
+  });
+}
 
-contactLink.addEventListener('click', function() {
-    smoothScroll('#contato', 1000);
-});
+if(contactLink != null){
+  contactLink.addEventListener('click', function() {
+      smoothScroll('#contato', 1000);
+  });
+}
 
 const $dropdown = $(".dropdown");
 const $dropdownToggle = $(".dropdown-toggle");
@@ -64,31 +68,78 @@ $(window).on("load resize", function() {
 });
 
 const searchParams = new URLSearchParams(window.location.search);
-console.log(searchParams.get('categoria')); 
+var cat = searchParams.get('categoria')
+console.log(cat);
 
-var requestURL = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
-var request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.responseType = "json";
-request.send();
-request.onload = function () {
-  var superHeroes = request.response;
-  console.log(superHeroes)
-  var heroes = superHeroes["members"];
+var cardapio = {    
+    "pratos": [      
+        {
+            "cod": "1",
+            "nome": "Macarão",
+            "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta vel tellus quis rhoncus. Pellentesque aliquam fringilla arcu vel pharetra.",
+            "preco": "29,90",
+            "imagem": "img/macarao.jpg",
+            "categoria": "principal",
+            "avaliacoes": [
+              {
+                "nome": "teste",
+                "avaliação": "teste teste teste"
+              }
+            ]
+        },
+        {
+          "cod": "1",
+          "nome": "Batata frita",
+          "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta vel tellus quis rhoncus. Pellentesque aliquam fringilla arcu vel pharetra.",
+          "preco": "12,90",
+          "imagem": "img/batata-frita.jpg",
+          "categoria": "entradas",
+          "avaliacoes": [
+            {
+              "nome": "teste",
+              "avaliação": "teste teste teste"
+            }
+          ]
+      },
+      {
+        "cod": "1",
+        "nome": "Bolinho de bacalhau",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta vel tellus quis rhoncus. Pellentesque aliquam fringilla arcu vel pharetra.",
+        "preco": "14,50",
+        "imagem": "img/bolinho.jpg",
+        "categoria": "entradas",
+        "avaliacoes": [
+          {
+            "nome": "teste",
+            "avaliação": "teste teste teste"
+          }
+        ]
+    }
+    ]
+}
 
-  var container = '';
-  for (var i = 0; i < heroes.length; i++) {
-    container += '<div class="col-md-10 row prato" style="padding-top: 20px" >';
-      container += '<div class="col-md-3">';
-        container += `<img src="img/macarao.jpg" style="width: 100%"/>`          
+
+var pratos = cardapio["pratos"];
+var container = '';
+for (var i = 0; i < pratos.length; i++) {
+  if(pratos[i].categoria == cat || cat == 'all' || cat == null){
+    container += '<div class="col-md-10 row prato">';
+      container += '<div class="col-md-4">';
+        container += `<img class="imagem" src="${pratos[i].imagem}" style="width: 100%"/>`          
       container += '</div>'
-      container += '<div class="col-md-8">';  
-        container += `<p>${heroes[i].name}</p>`    
-        container += `<p>${heroes[i].secretIdentity}</p>`    
+      container += '<div class="col-md-8">'; 
+        if(cat == 'all' || cat == null) {
+          container += `<p class="nome">${pratos[i].nome}<span style="font-size: 13px;font-weight: normal;">${pratos[i].categoria}</span></p>`    
+        }else{
+          container += `<p class="nome">${pratos[i].nome}</p>`    
+        }
+        container += `<p class="descricao">${pratos[i].descricao}</p>`   
+        container += `<p class="preco">R$ ${pratos[i].preco}</p>`   
+        container += `<a class="botao" href=""#">Ver mais</a>` 
       container += '</div>'
     container += '</div>'
   }
-  document.getElementById("pratos").innerHTML = container
-  //populateHeader(superHeroes);
-  //showHeroes(superHeroes);
-};
+}
+document.getElementById("pratos").innerHTML = container
+  
+

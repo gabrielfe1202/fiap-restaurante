@@ -107,6 +107,17 @@ nav a:hover{
     color: #fff;
 }
 
+.banner2{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/fundo-preto-com-comidas.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
 h1{
     font-family: 'Madimi One', sans-serif;
     font-size: 50px;
@@ -164,7 +175,6 @@ h1{
     top: 60%;    
     opacity: 1;
 }
-
 
 .lousa{
     background-image: 
@@ -248,6 +258,77 @@ form button{
     padding-right: 20px;
 }
 
+.prato{
+    padding-top: 20px;
+    padding-bottom: 20px;    
+}
+
+.prato:nth-child(odd) {
+    flex-direction: row;
+    background: #ffe9d2;
+    border-radius: 0px 15px 0px 15px;
+}
+
+.prato:nth-child(even) {
+    flex-direction: row-reverse;
+    background: #f9cfa2;
+    text-align: right;
+    border-radius: 0px 15px 0px 15px;
+}
+
+.prato:nth-child(even) .nome {    
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    flex-direction: row-reverse;
+}
+
+.prato .nome span{
+    padding: 0px 10px;
+}
+
+.prato .imagem{
+    border-radius: 15px;
+}
+
+.prato .nome{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.prato .descricao{
+    font-size: 16px;
+    color: #202020;
+}
+
+.prato .preco{
+    font-size: 18px;
+    font-weight: 800;
+    color: #202020;
+}
+
+.prato .botao{
+    background: #ffc50d;
+    color: #000;
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: none;    
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.prato .botao:hover{
+    background: #ffc50d;
+    color: #000;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: none;    
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .5s;
+}
+
 @media only screen and (max-width: 760px) {
     .logo{
         width: 100%;
@@ -264,5 +345,17 @@ form button{
     }
     .rodape p{
         text-align: center;
+    }
+    .prato{
+        text-align: center;
+    }    
+    .prato:nth-child(even) {        
+        text-align: center;            
+    }
+    .prato .nome{
+        justify-content: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 }
