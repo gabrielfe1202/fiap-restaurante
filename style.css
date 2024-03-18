@@ -100,6 +100,7 @@ nav a:hover{
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/restaurante-moderno-com-palco-de-teatro.jpg');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -111,6 +112,7 @@ nav a:hover{
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/fundo-preto-com-comidas.jpg');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -209,7 +211,7 @@ form{
     text-align: center;
 }
 
-input, textarea{
+input, textarea, select{
     width: 100%;
     margin-bottom: 15px;
     color: #000;
@@ -219,6 +221,15 @@ input, textarea{
     border-radius: 10px;
     resize: none;
     font-size: 16px;
+}
+
+option{
+    background: #ffc50d !important;
+}
+
+.dropdown-menu li a:hover {
+    color: whitesmoke !important;
+    background: #bf5279 !important;
 }
 
 ::placeholder{
@@ -329,6 +340,94 @@ form button{
     transition: all .5s;
 }
 
+#titulo_prato{
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#imagem_prato{
+    width: 100%;
+    border-radius: 15px;
+}
+
+#desc_prato{
+    font-size: 18px;
+}
+
+#prato{
+    background: #f9cfa2;   
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.prato .preco{
+    font-size: 18px;
+    font-weight: 800;
+    color: #202020;
+}
+
+#preco_prato{
+    font-size: 18px;
+    font-weight: 800;
+    color: #202020;
+}
+
+.titulo_avaliacao{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.nome_avaliacao{
+    font-size: 19px;    
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+#avaliacoes{
+    padding-left: 30px;
+}
+
+.avaliacao{
+    border-bottom: 1px solid #000;
+    padding-top: 15px;
+}
+
+.avaliacao:last-child{
+    border-bottom: 0px solid #000;
+}
+
+.starFundos{
+    font-size: 20px;
+    color: #505050;
+}
+
+.starFundos {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+    margin-left: 15px;
+}
+
+.starFundos::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    /*Estrelas de fundo*/
+    color: #a1a1a1;
+}
+
+.starAvaliacao {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    overflow: hidden;			
+}
+
+.starAvaliacao::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    /*estrelas de avaliacao*/
+    color: rgb(245, 166, 19);
+}
+
 @media only screen and (max-width: 760px) {
     .logo{
         width: 100%;
@@ -357,5 +456,11 @@ form button{
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+    }
+    #avaliacoes{
+        padding-left: 0px;
+    }
+    .titulo_avaliacao{
+        text-align: center;
     }
 }
