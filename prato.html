@@ -1,125 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho Risadas restaurante</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho Risadas restaurante</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
-    <meta property="og:tag" content="">
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Trabalho Risadas restaurante" />
-    <meta property="og:description" content="Trabalho fiap front-end" />
-    <meta property="og:site_name" content="Trabalho Risadas restaurante" />
-    <meta property="og:image" content="http://gabriel.o2ew.com.br/img/logo-original.jpg" />
+  <meta property="og:tag" content="">
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Trabalho Risadas restaurante" />
+  <meta property="og:description" content="Trabalho fiap front-end" />
+  <meta property="og:site_name" content="Trabalho Risadas restaurante" />
+  <meta property="og:image" content="http://gabriel.o2ew.com.br/img/logo-original.jpg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-    <header>  
+  <header>
+    <nav>
+      <a href="resturante.html" class="logo"><img src="img/logo.png" style="height: 80px;"></a>
+      <ul>
+        <li><a href="resturante.html">Home</a></li>
+        <li><a href="resturante.html#sobre">Sobre nós</a></li>
+        <li><a href="cardapio.html">Cardapio</a></li>
+        <li><a href="resturante.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="resturante.html" style="max-width: 75%;">
-                <img class="logo horizontal-logo" src="img/logo.png" alt="logo" style="max-height: 80px;"> 
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fa fa-bars"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="resturante.html">Home</a>
-                  </li>                                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="resturante.html#sobre">Sobre nós</a>
-                  </li>                  
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Cardapio
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                        <a class="dropdown-item" href="cardapio.html?categoria=all">Completo</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cardapio.html?categoria=entradas">Entradas</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cardapio.html?categoria=principal">Pratos principais</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cardapio.html?categoria=bebidas">Bebidas</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="resturante.html#contato">Contato</a>
-                  </li>
-                </ul>
+  <section class="banner2">
+    <h1>Cardapio</h1>
+  </section>
+
+  <section style="padding: 45px 0px;">
+    <div class="container" style="justify-content: center;display: flex;">
+      <div class="col-md-10 row" id="prato" style="align-items: top;">
+        <div class="col-md-5">
+          <img src="img/macarrao.jpg" alt="" id="imagem_prato">
+        </div>
+        <div class="col-md-7">
+          <p id="titulo_prato">Espaguete da Felicidade</p>
+          <p id="desc_prato">Ingredientes: Espaguete com almôndegas em forma de sorrisos e molho de tomate. Valor
+            nutricional: Proteínas (carne), carboidratos (macarrão) e gordura (molho). Alergênicos: Glúten (macarrão),
+            carne.</p>
+          <p id="preco_prato">R$ 29,90</p>
+        </div>
+        <div class="col-md-12" style="padding-top: 40px;">
+          <p class="titulo_avaliacao">Avaliações:</p>
+          <div id="avaliacoes">
+            <div class="avaliacao">
+              <div style="display: flex;flex-flow: wrap">
+                <p class="nome_avaliacao">Thiago Ventura:</p>                
               </div>
+              <p class="texto_avaliacao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper
+                euismod euismod. Nunc ac scelerisque tellus. Aenean sed convallis orci, eu pharetra ante. Vivamus sapien
+                nisl, euismod ac varius eu, dignissim id dui. Aenean ut eros sed mi malesuada varius. Vestibulum
+                suscipit bibendum quam non faucibus. Praesent auctor, nibh vel luctus cursus, ipsum urna pharetra
+                mauris, eget pretium erat libero quis eros. In porta magna tortor, consectetur ultrices tortor aliquet
+                vel. Fusce malesuada magna erat, ut blandit tortor mattis et.</p>
             </div>
-          </nav>
-<!--
-        <nav>
-            <a href="resturante.html" class="logo"><img src="img/logo.png" style="height: 80px;" ></a>
-            <a href="resturante.html">Home</a>
-            <a href="#sobre">Sobre nós</a>
-            <a href="#">Cardapio</a>
-            <a href="#contato">Contato</a>
-        </nav>-->
-    </header>
-
-    <section class="banner2">        
-        <h1>Cardapio</h1>
-    </section>
-  
-    <section style="padding: 45px 0px;">
-        <div class="container" style="justify-content: center;display: flex;">            
-            <div class="col-md-10 row" id="prato">
-                 <div class="col-md-5">
-                    <img src="" alt="" id="imagem_prato">
-                 </div>            
-                 <div class="col-md-7">
-                    <p id="titulo_prato"></p>
-                    <p id="desc_prato"></p>
-                    <p id="preco_prato"></p>
-                 </div>                 
-                 <div class="col-md-12" style="padding-top: 40px;">
-                    <p class="titulo_avaliacao">Avaliações:</p>                                     
-                    <div id="avaliacoes">
-                        <div class="avaliacao">
-                            <p class="nome_avaliacao"></p>
-                            <p class="texto_avaliacao"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>            
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="rodape">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <p>© Copyright 2024 Grupo 7. Todos os direitos reservados. <a href="#">Politica de privacidade</a></p>
-                </div>
-                <div class="col-md-4 icones">
-                    <a href="#" target="_blank"><i class="fa fa-facebook icone-rodape"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-whatsapp icone-rodape"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-instagram icone-rodape"></i></a>
-                </div>
-            </div>
+  <footer class="rodape">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p>© Copyright 2024 Grupo 7. Todos os direitos reservados. <a href="#">Politica de privacidade</a></p>
         </div>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>   
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="script.js"></script>
-
+        <div class="col-md-4 icones">
+          <a href="#" target="_blank" style="padding: 0 15px;">
+              <img src="img/facebook.png" style="width: 25px;">                        
+          </a>
+          <a href="#" target="_blank" style="padding: 0 15px;">
+              <img src="img/whatsapp.png" style="width: 25px;">                        
+          </a>                                        
+          <a href="#" target="_blank" style="padding: 0 15px;">
+              <img src="img/instagram.png" style="width: 25px;">                        
+          </a>                                        
+      </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

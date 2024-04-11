@@ -1,27 +1,88 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam');
 
-body{
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/Montserrat-Light.eot');
+    src: url('font/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('font/Montserrat-Light.woff2') format('woff2'),
+        url('font/Montserrat-Light.woff') format('woff'),
+        url('font/Montserrat-Light.ttf') format('truetype'),
+        url('font/Montserrat-Light.svg#Montserrat-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Madimi One';
+    src: url('font/MadimiOne-Regular.eot');
+    src: url('font/MadimiOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/MadimiOne-Regular.woff2') format('woff2'),
+        url('font/MadimiOne-Regular.woff') format('woff'),
+        url('font/MadimiOne-Regular.ttf') format('truetype'),
+        url('font/MadimiOne-Regular.svg#MadimiOne-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
     background: url('img/back.png');
     background-size: contain;
 }
 
-nav{
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding: 0 25px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav {
     display: flex;
     flex-flow: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;    
-    background: #ffc50d;    
+    align-items: center;
+    background: #ffc50d;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 
-nav a{
+nav a {
     color: #000;
     font-size: 19px;
 }
 
-nav a:hover{
+nav a:hover {
     color: #000;
     font-size: 19px;
     text-decoration: none;
@@ -35,47 +96,48 @@ nav a:hover{
 .navbar .nav-item:last-child {
     margin-right: 55px;
 }
-  
+
 .dropdown-toggle::after {
-     transition: transform 0.15s linear; 
+    transition: transform 0.15s linear;
 }
-  
+
 .show.dropdown .dropdown-toggle::after {
     transform: translateY(3px);
 }
-  
+
 .dropdown-menu {
     margin-top: 0;
 }
 
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
     color: #000 !important;
 }
 
 .navbar-dark .navbar-toggler {
-    color: #000;    
+    color: #000;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
     color: rgba(0, 0, 0, 0.8) !important;
 }
 
-.navbar-dark .navbar-toggler-icon{
-    background-image: none;    
+.navbar-dark .navbar-toggler-icon {
+    background-image: none;
     width: auto;
     height: auto;
     font-size: 28px;
 }
 
-.navbar-dark .navbar-toggler{
+.navbar-dark .navbar-toggler {
     border-color: rgba(0, 0, 0, 0.2);
 }
 
-.show > .dropdown-menu {
+.show>.dropdown-menu {
     max-height: 800px;
     visibility: visible;
 }
-    
+
 .dropdown-menu {
     display: block;
     max-height: 0;
@@ -86,18 +148,20 @@ nav a:hover{
     background: #ffc50d;
 }
 
-.dropdown-divider{
+.dropdown-divider {
     border-color: #000;
 }
 
-.dropdown-item:focus, .dropdown-item:hover, .dropdown-item:active {
+.dropdown-item:focus,
+.dropdown-item:hover,
+.dropdown-item:active {
     color: #16181b;
     text-decoration: none;
     background-color: #e9ecef69;
 }
 
-.banner{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/restaurante-moderno-com-palco-de-teatro.jpg');
+.banner {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/restaurante-moderno-com-palco-de-teatro.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -108,8 +172,8 @@ nav a:hover{
     color: #fff;
 }
 
-.banner2{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/fundo-preto-com-comidas.jpg');
+.banner2 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/fundo-preto-com-comidas.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -120,14 +184,67 @@ nav a:hover{
     color: #fff;
 }
 
-h1{
+h1 {
     font-family: 'Madimi One', sans-serif;
     font-size: 50px;
     padding-bottom: 30px;
     text-align: center;
 }
 
-.cardapio{
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-md-4,
+.col-md-6,
+.col-md-8,
+.col-md-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-md-4 {
+    width: 30%;
+}
+
+.col-md-5 {
+    width: 35%;
+}
+
+.col-md-7{
+    width: 58%;
+    padding-left: 25px;
+}
+
+.col-md-8 {
+    width: 62%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    max-width: 1140px;
+    float: none;
+    margin: auto;
+}
+
+
+.cardapio {
     height: 333px;
     background-size: cover !important;
     background-position: center !important;
@@ -140,78 +257,84 @@ h1{
     transition: 0.3s;
 }
 
-.cardapio .texto{
+.cardapio .texto {
     font-size: 26px;
     color: #fff;
     text-align: center;
 }
 
-.cardapio .botao{
+.cardapio .botao {
     background: #ffc50d;
     padding: 6px 35px;
     border-radius: 8px;
     color: #000;
     font-size: 17px;
     transition: 0.3s;
-    display: none;    
+    display: none;
     transition: all 1s;
-    top: 90%;    
+    top: 90%;
     transition-property: top;
     position: absolute;
     display: inline-block;
     opacity: 0;
 }
 
-.cardapio .botao:hover{    
-    padding: 9px 40px;    
+.cardapio .botao:hover {
+    padding: 9px 40px;
     text-decoration: none;
     transition: 0.5s;
 }
 
-.cardapio:hover{
+.cardapio:hover {
     width: 115%;
-    margin-left: -7.5%;    
+    margin-left: -7.5%;
 }
 
-.cardapio:hover .botao{    
-    top: 60%;    
+.cardapio:hover .botao {
+    top: 60%;
     opacity: 1;
 }
 
-.lousa{
-    background-image: 
-		radial-gradient( circle at left 30%, 
-			rgba(34, 34, 34, 0.2), 
-			rgba(34, 34, 34, 0.2) 80px, 
-			rgba(34, 34, 34, 0.3) 100px, 
-			rgba(51, 51, 51, 0.3) 160px, 
-			rgba(51, 51, 51, 0.3)), 
-		linear-gradient( 215deg, transparent, transparent 100px, 
-			rgba(34,34,34,0.4) 260px, rgba(34,34,34,0.4) 320px, transparent), 
-		radial-gradient( circle at right, rgba(17,17,17,0.4), rgba(51, 51, 51, 0.5)),
-		linear-gradient(0deg, rgba(80,80,80,1) , rgba(80,80,80,1) 70% );
-	background-color: rgba(51, 51, 51, 1);
+.lousa {
+    background-image:
+        radial-gradient(circle at left 30%,
+            rgba(34, 34, 34, 0.2),
+            rgba(34, 34, 34, 0.2) 80px,
+            rgba(34, 34, 34, 0.3) 100px,
+            rgba(51, 51, 51, 0.3) 160px,
+            rgba(51, 51, 51, 0.3)),
+        linear-gradient(215deg, transparent, transparent 100px,
+            rgba(34, 34, 34, 0.4) 260px, rgba(34, 34, 34, 0.4) 320px, transparent),
+        radial-gradient(circle at right, rgba(17, 17, 17, 0.4), rgba(51, 51, 51, 0.5)),
+        linear-gradient(0deg, rgba(80, 80, 80, 1), rgba(80, 80, 80, 1) 70%);
+    background-color: rgba(51, 51, 51, 1);
     font-family: 'Kalam', cursive;
     color: #fff;
     border: tan solid 12px;
-	border-top: #bda27e solid 12px;
-	border-left: #b19876 solid 12px;
-	border-bottom: #c9ad86 solid 12px;
-	box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 
-		0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 
-		3px 4px 8px 5px rgba(0, 0, 0, 0.5);
-    padding: 45px;    
-    color: rgba(120,120,120,0.8);
+    border-top: #bda27e solid 12px;
+    border-left: #b19876 solid 12px;
+    border-bottom: #c9ad86 solid 12px;
+    box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0),
+        0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f,
+        3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    padding: 45px;
+    color: rgba(120, 120, 120, 0.8);
     text-shadow: -1px 0 0px white;
+    max-width: 700px;
 }
 
-form{
+form {
     width: 100%;
     padding-bottom: 80px;
     text-align: center;
+    max-width: 650px;
+    float: none;
+    margin: auto;
 }
 
-input, textarea, select{
+input,
+textarea,
+select {
     width: 100%;
     margin-bottom: 15px;
     color: #000;
@@ -223,7 +346,7 @@ input, textarea, select{
     font-size: 16px;
 }
 
-option{
+option {
     background: #ffc50d !important;
 }
 
@@ -232,20 +355,20 @@ option{
     background: #bf5279 !important;
 }
 
-::placeholder{
+::placeholder {
     color: #000;
 }
 
-form button{
+form button {
     background: #ffc50d;
     color: #000;
     padding: 10px 50px;
     border-radius: 10px;
-    border: none;    
+    border: none;
     font-size: 18px;
 }
 
-.icones{
+.icones {
     display: flex;
     flex-flow: wrap;
     flex-direction: row;
@@ -253,25 +376,27 @@ form button{
     align-items: center;
 }
 
-.rodape{
+.rodape {
     background: #ffc50d;
     padding: 20px 0px;
 }
 
-.rodape a,.rodape p{
-    color: #000;  
-    margin: 0;  
+.rodape a,
+.rodape p {
+    color: #000;
+    margin: 0;
 }
 
-.icone-rodape{
+.icone-rodape {
     color: #000;
     font-size: 22px !important;
     padding-right: 20px;
 }
 
-.prato{
+.prato {
     padding-top: 20px;
-    padding-bottom: 20px;    
+    padding-bottom: 20px;
+    max-width: 900px;
 }
 
 .prato:nth-child(odd) {
@@ -287,116 +412,124 @@ form button{
     border-radius: 0px 15px 0px 15px;
 }
 
-.prato:nth-child(even) .nome {    
+.prato:nth-child(even) .nome {
     display: flex;
     justify-content: end;
     align-items: baseline;
     flex-direction: row-reverse;
 }
 
-.prato .nome span{
+.prato:nth-child(even) div {
+    align-items: flex-end;
+}
+
+.prato .nome span {
     padding: 0px 10px;
 }
 
-.prato .imagem{
+.prato .imagem {
     border-radius: 15px;
 }
 
-.prato .nome{
+.prato .nome {
     font-size: 24px;
     font-weight: 800;
 }
 
-.prato .descricao{
+.prato .descricao {
     font-size: 16px;
     color: #202020;
+    margin-top: 5px;
 }
 
-.prato .preco{
+.prato .preco {
     font-size: 18px;
     font-weight: 800;
     color: #202020;
+    margin-top: 10px;
 }
 
-.prato .botao{
+.prato .botao {
     background: #ffc50d;
     color: #000;
     padding: 5px 25px;
     border-radius: 5px;
-    border: none;    
+    border: none;
     font-size: 14px;
     font-weight: 600;
+    margin-top: 20px;
+    width: fit-content;
 }
 
-.prato .botao:hover{
+.prato .botao:hover {
     background: #ffc50d;
     color: #000;
     padding: 8px 30px;
     border-radius: 5px;
-    border: none;    
+    border: none;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     transition: all .5s;
 }
 
-#titulo_prato{
+#titulo_prato {
     font-size: 32px;
     font-weight: 800;
 }
 
-#imagem_prato{
+#imagem_prato {
     width: 100%;
     border-radius: 15px;
 }
 
-#desc_prato{
+#desc_prato {
     font-size: 18px;
 }
 
-#prato{
-    background: #f9cfa2;   
+#prato {
+    background: #f9cfa2;
     padding: 40px;
     border-radius: 20px;
 }
 
-.prato .preco{
+.prato .preco {
     font-size: 18px;
     font-weight: 800;
     color: #202020;
 }
 
-#preco_prato{
+#preco_prato {
     font-size: 18px;
     font-weight: 800;
     color: #202020;
 }
 
-.titulo_avaliacao{
+.titulo_avaliacao {
     font-size: 25px;
     font-weight: 800;
 }
 
-.nome_avaliacao{
-    font-size: 19px;    
+.nome_avaliacao {
+    font-size: 19px;
     font-weight: 800;
     margin-bottom: 0;
 }
 
-#avaliacoes{
+#avaliacoes {
     padding-left: 30px;
 }
 
-.avaliacao{
+.avaliacao {
     border-bottom: 1px solid #000;
     padding-top: 15px;
 }
 
-.avaliacao:last-child{
+.avaliacao:last-child {
     border-bottom: 0px solid #000;
 }
 
-.starFundos{
+.starFundos {
     font-size: 20px;
     color: #505050;
 }
@@ -419,7 +552,7 @@ form button{
     white-space: nowrap;
     top: 0;
     left: 0;
-    overflow: hidden;			
+    overflow: hidden;
 }
 
 .starAvaliacao::before {
@@ -429,38 +562,97 @@ form button{
 }
 
 @media only screen and (max-width: 760px) {
-    .logo{
+    .logo {
         width: 100%;
     }
-    nav a{
+
+    nav a {
         text-align: center;
     }
-    .navbar-brand{
+
+    .navbar-brand {
         margin: 0;
-    }        
-    .icones{        
-        justify-content: space-evenly;        
+    }
+
+    .icones {
+        justify-content: space-evenly;
         padding-top: 15px;
     }
-    .rodape p{
+
+    .rodape p {
         text-align: center;
     }
-    .prato{
+
+    .prato {
         text-align: center;
-    }    
-    .prato:nth-child(even) {        
-        text-align: center;            
     }
-    .prato .nome{
+
+    .prato:nth-child(even) {
+        text-align: center;
+    }
+
+    .prato .nome {
         justify-content: center !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
     }
-    #avaliacoes{
+
+    #avaliacoes {
         padding-left: 0px;
     }
-    .titulo_avaliacao{
+
+    .titulo_avaliacao {
         text-align: center;
+    }
+    .lousa{
+        padding: 0;
+    }
+    .col-md-12,.col-md-4,.col-md-5{
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 869px) {
+    .col-md-4, .col-md-8 {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .container,
+    .container-sm {
+        max-width: 540px;
     }
 }

@@ -1,109 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho Risadas restaurante</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho Risadas restaurante</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
-    <meta property="og:tag" content="">
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Trabalho Risadas restaurante" />
-    <meta property="og:description" content="Trabalho fiap front-end" />
-    <meta property="og:site_name" content="Trabalho Risadas restaurante" />
-    <meta property="og:image" content="http://gabriel.o2ew.com.br/img/logo-original.jpg" />
+  <meta property="og:tag" content="">
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Trabalho Risadas restaurante" />
+  <meta property="og:description" content="Trabalho fiap front-end" />
+  <meta property="og:site_name" content="Trabalho Risadas restaurante" />
+  <meta property="og:image" content="http://gabriel.o2ew.com.br/img/logo-original.jpg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-    <header>  
+  <header>
+    <nav>
+      <a href="resturante.html" class="logo"><img src="img/logo.png" style="height: 80px;"></a>
+      <ul>
+        <li><a href="resturante.html">Home</a></li>
+        <li><a href="resturante.html#sobre">Sobre nós</a></li>
+        <li><a href="cardapio.html">Cardapio</a></li>
+        <li><a href="resturante.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="resturante.html" style="max-width: 75%;">
-                <img class="logo horizontal-logo" src="img/logo.png" alt="logo" style="max-height: 80px;"> 
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fa fa-bars"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="resturante.html">Home</a>
-                  </li>                                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="resturante.html#sobre">Sobre nós</a>
-                  </li>                  
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Cardapio
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                        <a class="dropdown-item" href="cardapio.html?categoria=all">Completo</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cardapio.html?categoria=entradas">Entradas</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cardapio.html?categoria=principal">Pratos principais</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cardapio.html?categoria=bebidas">Bebidas</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="resturante.html#contato">Contato</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-<!--
-        <nav>
-            <a href="resturante.html" class="logo"><img src="img/logo.png" style="height: 80px;" ></a>
-            <a href="resturante.html">Home</a>
-            <a href="#sobre">Sobre nós</a>
-            <a href="#">Cardapio</a>
-            <a href="#contato">Contato</a>
-        </nav>-->
-    </header>
+  <section class="banner">
+    <h1 id="titulo_cardapio">Cardapio</h1>
+  </section>
 
-    <section class="banner">        
-        <h1 id="titulo_cardapio">Cardapio</h1>
-    </section>
-  
-    <section style="padding: 45px 0px;">
-        <div class="container" style="justify-content: center;display: flex;">            
-            <div class="col-md-10 row pratos" id="pratos"  style="display: flex;justify-content: center;grid-gap: 20px;">
-                             
-            </div>
+  <section style="padding: 45px 0px;">
+    <div class="container" style="justify-content: center;display: flex;">
+      <div class="col-md-10 row pratos" id="p1ratos" style="display: flex;justify-content: center;grid-gap: 20px;">
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/macarrao.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Espaguete da Felicidade<span style="font-size: 13px;font-weight: normal;">principal</span>
+            </p>
+            <p class="descricao">Ingredientes: Espaguete com almôndegas em forma de sorrisos e molho de tomate. Valor
+              nutricional: Proteínas (carne), carboidratos (macarrão) e gordura (molho). Alergênicos: Glúten (macarrão),
+              carne.</p>
+            <p class="preco">R$ 29,90</p><a class="botao" href="prato.html?cod=1">Ver mais</a>
+          </div>
         </div>
-    </section>
-
-    <footer class="rodape">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <p>© Copyright 2024 Grupo 7. Todos os direitos reservados. <a href="#">Politica de privacidade</a></p>
-                </div>
-                <div class="col-md-4 icones">
-                    <a href="#" target="_blank"><i class="fa fa-facebook icone-rodape"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-whatsapp icone-rodape"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-instagram icone-rodape"></i></a>
-                </div>
-            </div>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/risoto.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Risoto Risível<span style="font-size: 13px;font-weight: normal;">principal</span></p>
+            <p class="descricao">Ingredientes: Risoto de cogumelos com parmesão em formato de palhaço. Valor
+              nutricional: Proteínas (queijo), carboidratos (arroz) e gordura (queijo). Alergênicos: Laticínios
+              (queijo).</p>
+            <p class="preco">R$ 29,90</p><a class="botao" href="prato.html?cod=2">Ver mais</a>
+          </div>
         </div>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>   
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="script.js"></script>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/pizza.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Pizzas Engraçadas<span style="font-size: 13px;font-weight: normal;">principal</span></p>
+            <p class="descricao">Ingredientes: Pizzas em formatos divertidos com diversas coberturas e queijo derretido.
+              Valor nutricional: Proteínas (queijo e carnes), carboidratos (massa) e gordura (queijo e
+              carnes).Alergênicos: Glúten (massa), laticínios (queijo</p>
+            <p class="preco">R$ 29,90</p>
+            <a class="botao" href="prato.html?cod=3">Ver mais</a>
+          </div>
+        </div>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/salada.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Salada de Risadas<span style="font-size: 13px;font-weight: normal;">entradas</span></p>
+            <p class="descricao">Ingredientes: Salada de frutas frescas com molho de iogurte e granola em formato de
+              sorrisos. Valor nutricional: Rica em fibras e vitaminas (frutas e granola), moderada em gordura
+              (iogurte).Alergênicos: Laticínios (iogurte).</p>
+            <p class="preco">R$ 12,90</p><a class="botao" href="prato.html?cod=4">Ver mais</a>
+          </div>
+        </div>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/pao.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Pão do bobo<span style="font-size: 13px;font-weight: normal;">entradas</span></p>
+            <p class="descricao">Ingredientes: Pão recheado com queijo derretido e bacon crocante. Valor nutricional:
+              Proteínas (queijo e bacon), carboidratos (pão), gordura (bacon). Alergênicos: Glúten (pão), laticínios
+              (queijo), carne (bacon).</p>
+            <p class="preco">R$ 14,50</p><a class="botao" href="prato.html?cod=5">Ver mais</a>
+          </div>
+        </div>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/queijo.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Tiras de riso<span style="font-size: 13px;font-weight: normal;">entradas</span></p>
+            <p class="descricao">Ingredientes: Tiras de queijo empanadas servidas com molho de pimenta Valor
+              nutricional: Rica em proteínas (queijo), gordura (empanado) e carboidratos (molho de pimenta).
+              Alergênicos: Laticínios (queijo), glúten (empanado).</p>
+            <p class="preco">R$ 14,50</p><a class="botao" href="prato.html?cod=6">Ver mais</a>
+          </div>
+        </div>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/limonada.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Limona<span style="font-size: 13px;font-weight: normal;">bebidas</span></p>
+            <p class="descricao">Ingredientes: Limonada com gás em garrafas com rótulos divertidos. Valor nutricional:
+              Baixas calorias. Fonte de vitamina C. Alergênicos: Nenhum.</p>
+            <p class="preco">R$ 14,90</p><a class="botao" href="prato.html?cod=7">Ver mais</a>
+          </div>
+        </div>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/suco.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Suco do Sorriso<span style="font-size: 13px;font-weight: normal;">bebidas</span></p>
+            <p class="descricao">Ingredientes: Suco de laranja e manga servido em copos com canudos engraçados. Valor
+              nutricional: Vitaminas das frutas, baixas calorias. Alergênicos: Nenhum.</p>
+            <p class="preco">R$ 14,90</p><a class="botao" href="prato.html?cod=8">Ver mais</a>
+          </div>
+        </div>
+        <div class="col-md-10 row prato">
+          <div class="col-md-4"><img class="imagem" src="img/drink.jpg" style="width: 100%"></div>
+          <div class="col-md-8">
+            <p class="nome">Coquetel do Bobo<span style="font-size: 13px;font-weight: normal;">bebidas</span></p>
+            <p class="descricao">Ingredientes: Coquetel de frutas com guarda-chuvas coloridos. Valor nutricional: Baixas
+              calorias. Alergênicos: Pode variar de acordo com os ingredientes.</p>
+            <p class="preco">R$ 19,90</p><a class="botao" href="prato.html?cod=9">Ver mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer class="rodape">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p>© Copyright 2024 Grupo 7. Todos os direitos reservados. <a href="#">Politica de privacidade</a></p>
+        </div>
+        <div class="col-md-4 icones">
+          <a href="#" target="_blank" style="padding: 0 15px;">
+              <img src="img/facebook.png" style="width: 25px;">                        
+          </a>
+          <a href="#" target="_blank" style="padding: 0 15px;">
+              <img src="img/whatsapp.png" style="width: 25px;">                        
+          </a>                                        
+          <a href="#" target="_blank" style="padding: 0 15px;">
+              <img src="img/instagram.png" style="width: 25px;">                        
+          </a>                                        
+      </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
