@@ -37,7 +37,6 @@
     font-display: swap;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -253,7 +252,6 @@ h1 {
     float: none;
     margin: auto;
 }
-
 
 .cardapio {
     height: 333px;
@@ -629,7 +627,6 @@ form button {
 }
 
 @media only screen and (max-width: 869px) {
-
     .col-md-4,
     .col-md-8 {
         width: 95%;
@@ -637,7 +634,6 @@ form button {
 }
 
 @media only screen and (max-width: 1200px) {
-
     .container,
     .container-lg,
     .container-md,
@@ -648,7 +644,6 @@ form button {
 }
 
 @media only screen and (max-width: 992px) {
-
     .container,
     .container-lg,
     .container-md,
@@ -658,7 +653,6 @@ form button {
 }
 
 @media only screen and (max-width: 768px) {
-
     .container,
     .container-md,
     .container-sm {
@@ -667,7 +661,6 @@ form button {
 }
 
 @media only screen and (max-width: 576px) {
-
     .container,
     .container-sm {
         max-width: 540px;
