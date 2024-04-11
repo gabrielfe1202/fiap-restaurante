@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Risadas restaurante</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+    <meta property="og:tag" content="">
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Trabalho Risadas restaurante" />
+    <meta property="og:description" content="Trabalho fiap front-end" />
+    <meta property="og:site_name" content="Trabalho Risadas restaurante" />
+    <meta property="og:image" content="http://gabriel.o2ew.com.br/img/logo-original.jpg" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="resturante.html" class="logo"><img src="img/logo.png" style="height: 80px;"></a>
+            <ul>
+                <li><a href="resturante.html">Home</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="cardapio.html">Cardapio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h1>Comidas e gargalhadas</h1>
+    </section>
+
+    <section style="padding: 45px 0px;">
+        <div class="container">
+            <div class="row text-center" style="justify-content: center;">
+                <h1 style="padding-bottom: 0;">Cardapio</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <div style="overflow: hidden;">
+                        <div class="cardapio"
+                            style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/porcoes.jpg');">
+                            <p class="texto">Entradas</p>
+                            <a class="botao" href="cardapio.html?categoria=entradas">Cardapio</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <div style="overflow: hidden;">
+                        <div class="cardapio"
+                            style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/carne.jpg');">
+                            <p class="texto">Pratos principais</p>
+                            <a class="botao" href="cardapio.html?categoria=principal">Cardapio</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <div style="overflow: hidden;">
+                        <div class="cardapio"
+                            style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('img/choop.jpg');">
+                            <p class="texto">Bebidas</p>
+                            <a class="botao" href="cardapio.html?categoria=bebidas">Cardapio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-bottom: 65px;" id="sobre">
+        <div class="container"
+            style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+            <div class="col-md-12">
+                <h1>Sobre nós</h1>
+            </div>
+            <div class="col-md-8 lousa">
+                <p
+                    style="text-align: center;color: rgba(150,150,150,0.8);font-size: 22px;font-family: 'Kalam', cursive;">
+                    Somos mais do que apenas um restaurante - somos uma experiência única onde o humor encontra a
+                    gastronomia. Fundado por um grupo de comediantes apaixonados pela culinária, o Restaurante Cômico
+                    Risadas é o lugar onde os sabores deliciosos se misturam com piadas hilariantes.
+                    <br><br>
+                    Imagine-se entrando em um ambiente acolhedor e vibrante, onde as paredes ecoam com risos
+                    contagiantes e as mesas estão repletas de pessoas compartilhando histórias engraçadas enquanto
+                    saboreiam pratos incríveis.
+                    <br><br>
+                    No menu, você encontrará uma mistura de pratos clássicos reinventados com um toque humorístico, bem
+                    como criações originais que vão surpreender seu paladar e seu senso de humor. Desde entradas que
+                    provocam risadas até sobremesas que fazem você rir alto, cada item é cuidadosamente elaborado para
+                    garantir uma experiência gastronômica inesquecível.
+                    <br><br>
+                    No Restaurante Cômico Risadas, acreditamos que a vida é muito curta para não rir e comer bem. Então
+                    junte-se a nós para uma noite cheia de diversão, risadas e, é claro, comida incrível. Estamos
+                    ansiosos para fazer você sorrir, tanto com nossos pratos quanto com nossas piadas!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container" style="display: flex;justify-content: center;">
+            <div class="col-md-6">
+                <h1>Fale conosco</h1>
+                <form>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" />
+                    <input type="text" name="email" id="email" placeholder="Email" />
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" />
+                    <input type="text" name="assunto" id="assunto" placeholder="Assunto" />
+                    <textarea rows="6" name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>© Copyright 2024 Grupo 7. Todos os direitos reservados. <a href="#">Politica de privacidade</a>
+                    </p>
+                </div>
+                <div class="col-md-4 icones">
+                    <a href="#" target="_blank" style="padding: 0 15px;">
+                        <img src="img/facebook.png" style="width: 25px;">
+                    </a>
+                    <a href="#" target="_blank" style="padding: 0 15px;">
+                        <img src="img/whatsapp.png" style="width: 25px;">
+                    </a>
+                    <a href="#" target="_blank" style="padding: 0 15px;">
+                        <img src="img/instagram.png" style="width: 25px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
