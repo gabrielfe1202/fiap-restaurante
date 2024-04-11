@@ -7,7 +7,7 @@ body {
 
 .load_container {
     width: 100%;
-    background: #fff;
+    background: #ffc50d;
     position: fixed;
     top: 0;
     left: 0;
@@ -52,6 +52,10 @@ body {
 
 .load :last-child {
     background: #193B48
+}
+
+.load hr{
+    background: #fff !important;
 }
 
 @keyframes spin {
